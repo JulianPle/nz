@@ -1,25 +1,25 @@
 /* Stile für die Neuseelandreise */
-
+/* Google Schriftarten werden importiert*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
-
+/* Schriftart Open Sans gerade, Hintergrundfarbe, Breite, automatische Zentrierung */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #ffffff;
     max-width: 1280px;
     margin: auto;
 }
-
+/*Bild steht direkt unter dem Header mit einer Breite von 1280px*/
 header>img {
     max-width: 100%;
 }
-
+/*Avatarbild enthält link, wird rund, linkzone auf die gesamte breite, zentriert, 50px nach oben verschoben*/
 header a img {
     border-radius: 50%;
     display: block;
     margin: auto;
     margin-top: -50px;
 }
-
+/* enthält den Artikel mit einer Breite von 1024px, um 25px nach oben, links rechts unten gepunktetete silberne Linie mit 1px breite*/
 main {
     max-width: 1024px;
     margin: auto;
@@ -28,17 +28,17 @@ main {
     border-right: 1px dashed silver;
     border-bottom: 1px dashed silver;
 }
-
+/* Platzhalter zwischen Außenlinie und Text*/
 article {
     padding: 1em;
 }
-
+/*Schriftart Beschreibung*/
 article p {
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     line-height: 1.2em;
 }
-
+/*Schriftart Überschriften*/
 article h1,
 article h2,
 article h3 {
@@ -48,19 +48,19 @@ article h3 {
 article figure>img {
     width: 100%;
 }
-
+/*bezieht sich auf ID=map*/
 #map {
     width: 90%;
     height: 600px;
     border: 1px solid silver;
     margin: auto;
 }
-
+/*abstand des footers oben rechts unten links*/
 footer {
     text-align: center;
     padding: 1em 2em 3em 2em;
 }
-
+/*Definition von 3 spalten links 40 mitte 20 rechts 40*/ 
 footer nav {
     display: grid;
     grid-template-columns: 40% 20% 40%;
@@ -69,16 +69,15 @@ footer nav {
 a {
     color: black;
 }
+/*box-shadow: Schatten*/
 
-header>img,
-figure>img,
-#map {
+.shadow {
     box-shadow:
         0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
 }
-
+/*wenn die Anzeige unter 1280px ist werden die Grenzen weggenommen und die Karte verkleinert*/
 @media screen and (max-width: 1280px) {
     main {
         border: none;
