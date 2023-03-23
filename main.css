@@ -4,7 +4,7 @@
 /* Schriftart Open Sans gerade, Hintergrundfarbe, Breite, automatische Zentrierung */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #ffffff;
+    background-color: rgb(255, 242, 222);
     max-width: 1280px;
     margin: auto;
 }
