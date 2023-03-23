@@ -39,15 +39,15 @@
             <h3>Übersichtskarte</h3>
                 <div id="map" style="width: 90%;height: 600px;border: 1px solid silver; margin: auto"></div>
                 <script>
-                    var map = L.map('map').setView([-44.38, 167.54], 13);
+                    var map = L.map('map').setView([-44.38, 167.54], 11);
 
                     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     }).addTo(map);
-                
+
                     L.marker([-44.38, 167.54]).addTo(map)
-                        .bindPopup('Milford Sound')
-                        .openPopup();
+                    .bindPopup('Milford Sound')
+                    .openPopup();
                 </script>
                 <head>
                 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
