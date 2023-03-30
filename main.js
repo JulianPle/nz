@@ -3,7 +3,13 @@ let stop_lng = 167.866667;
 let zoom = 13;
 let title = 'Milford Sound';
 
-const STOP = ["Moeraki Boulder", 'Milford Sound', 'Wanaka'];
+const STOP = ["Moeraki Boulder", {
+    title: "Milford Sound", //key value pair
+    user: "julianple",
+    lat: -44.616667,
+    lng: 167.866667,
+    wikipedia: "https://de.wikipedia.org/wiki/Milford_Sound/Piopiotahi"
+}, 'Wanaka'];
 console.log(STOP);
 console.log(STOP[0]);
 console.log(STOP[1]);
