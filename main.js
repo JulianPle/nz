@@ -110,10 +110,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.marker([stop_lat, stop_lng]).addTo(map)
-    .bindPopup(title)
-    .openPopup();
-
     for(let stop of STOPS){
         console.log(stop);
         console.log(stop.title);
@@ -121,4 +117,9 @@ L.marker([stop_lat, stop_lng]).addTo(map)
         console.log(stop.lat);
         console.log(stop.lng);
         console.log(stop.wikipedia);
+
+        L.marker([stop.lat, stop.lng]).addTo(map)
+    .bindPopup(stop.title)
+    .openPopup();
+
     }
