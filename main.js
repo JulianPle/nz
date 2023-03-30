@@ -108,10 +108,11 @@ for (let stop of STOPS) {
     //Marker für den Stop
     let marker = L.marker([stop.lat, stop.lng]);
         marker.addTo(map);
-        marker.bindPopup(stop.title);
+        marker.bindPopup(`<h3>${stop.title}</h3>
+        <a href="${stop.wikipedia}">Wikipedia</a>
+        `);
      
     if (stop.user == "julianple") {
         marker.openPopup();
-        console.log("Mein Marker: ", stop);
     }
 }
