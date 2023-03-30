@@ -59,35 +59,35 @@ const STOPS = [
         lat: -40.833333,
         lng: 172.9,
         wikipedia: "https://de.wikipedia.org/wiki/Abel-Tasman-Nationalpark"
-    }, 
+    },
     {
         title: "Picton",
         user: "LauraMap",
         lat: -41.293056,
         lng: 174.001944,
         wikipedia: "https://en.wikipedia.org/wiki/Picton,_New_Zealand"
-    }, 
+    },
     {
         title: "Die Hauptstadt von Neuseeland Wellington",
         user: "damerow",
         lat: -41.2875,
         lng: 174.7761,
         wikipedia: "https://de.wikipedia.org/wiki/Wellington",
-    }, 
+    },
     {
         title: "Tongariro-Nationalpark",
         user: "webmapping",
         lat: -39.2,
         lng: 175.583333,
         wikipedia: "https://de.wikipedia.org/wiki/Tongariro-Nationalpark"
-    }, 
+    },
     {
         title: "Rotorua",
         user: "juba1508",
         lat: "-38.136944",
         lng: "176.250833",
         wikipedia: "https://de.wikipedia.org/wiki/Rotorua"
-    }, 
+    },
     {
         title: "Auckland",
         user: "madeleinehll",
@@ -96,13 +96,7 @@ const STOPS = [
         wikipedia: "https://de.wikipedia.org/wiki/Auckland"
     }];
 
-
-
 console.log(STOPS);
-//console.log(STOP[0]);
-//console.log(STOP[1]);
-//console.log(STOP[2]);
-//console.log(STOP.length);
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
@@ -110,16 +104,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-    for(let stop of STOPS){
-        console.log(stop);
-        console.log(stop.title);
-        console.log(stop.user);
-        console.log(stop.lat);
-        console.log(stop.lng);
-        console.log(stop.wikipedia);
-
-        L.marker([stop.lat, stop.lng]).addTo(map)
-    .bindPopup(stop.title)
-    .openPopup();
-
+for (let stop of STOPS) {
+    //Marker für den Stop
+    let marker = L.marker([stop.lat, stop.lng]);
+        marker.addTo(map);
+        marker.bindPopup(stop.title);
+     
+    if (stop.user == "julianple") {
+        marker.openPopup();
+        console.log("Mein Marker: ", stop);
     }
+}
