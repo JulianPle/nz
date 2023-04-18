@@ -100,22 +100,40 @@ console.log(STOPS);
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
-L.control.scale({imperial:false, position:"topright"}).addTo(map);
+L.control.scale({imperial:false, position:"bottomleft"}).addTo(map);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.tileLayer.provider('Stamen.Watercolor').addTo(map);
-console.log(L.tileLayer())
 
 
+let osmLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+
+let tonerLayer = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+});
+
+let opentopo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    maxZoom: 17,
+    attribution: 'Map data: &copy; OpenTopoMap contributors, SRTM | Imagery: &copy; OpenStreetMap'
+}).addTo(map);
+
+
+
+L.control.layers({
+    "OpenStreetMap": osmLayer,
+    "Stamen Toner": tonerLayer,
+    "OpenTopo": opentopo,
+}).addTo(map);
 
 
 
 for (let stop of STOPS) {
     //Marker für den Stop
-    let marker = L.marker([stop.lat, stop.lng],{opacity:0.8});
+    let marker = L.marker([stop.lat, stop.lng],{opacity:1});
         marker.addTo(map);
         marker.bindPopup(`<h3>${stop.title}</h3>
         <a href="${stop.wikipedia}">Wikipedia</a>
