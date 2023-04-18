@@ -96,11 +96,12 @@ const STOPS = [
         wikipedia: "https://de.wikipedia.org/wiki/Auckland"
     }];
 
-console.log(STOPS);
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
+//funktioniert nicht
+//map.addControl(new L.Control.Fullscreen());
 
-L.control.scale({imperial:false, position:"bottomleft"}).addTo(map);
+L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -133,12 +134,12 @@ L.control.layers({
 
 for (let stop of STOPS) {
     //Marker für den Stop
-    let marker = L.marker([stop.lat, stop.lng],{opacity:1});
-        marker.addTo(map);
-        marker.bindPopup(`<h3>${stop.title}</h3>
+    let marker = L.marker([stop.lat, stop.lng], { opacity: 1 });
+    marker.addTo(map);
+    marker.bindPopup(`<h3>${stop.title}</h3>
         <a href="${stop.wikipedia}">Wikipedia</a>
         `);
-     
+
     if (stop.user == "julianple") {
         marker.openPopup();
     }
