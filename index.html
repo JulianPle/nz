@@ -6,14 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuseelandreise</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-      <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      
-        <script src="leaflet-provider.js"></script>
-        <script defer src="main.js"></script>
-    </head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <script src="leaflet-provider.js"></script>
+    <script defer src="main.js"></script>
+</head>
 
 <body>
     <header>
@@ -30,43 +36,51 @@
             <h2>
                 <em>Milford Sound</em>
             </h2>
-            <p>Der Milford Sound/Piopiotahi (Maori Piopiotahi) ist ein als Fjord zu bezeichnender Meeresarm auf der Südinsel von
+            <p>Der Milford Sound/Piopiotahi (Maori Piopiotahi) ist ein als Fjord zu bezeichnender Meeresarm auf der
+                Südinsel von
                 Neuseeland. <br>
-                Das 15,7 km lange Gewässer ist eine der bekanntesten Touristenattraktionen des Landes und gehört, da es Teil des
-                Fiordland National Parks im Südwesten der Insel ist, mit zum Weltnaturerbe der UNESCO, bei der die Region seit
-                1990 unter dem Namen Te Wahipounamu registriert ist. 
-                <div class="quelle">(Quelle: <a
-                    href="https://de.wikipedia.org/wiki/Milford_Sound/Piopiotahi">Wikipedia</a>)
-                </div>
+                Das 15,7 km lange Gewässer ist eine der bekanntesten Touristenattraktionen des Landes und gehört, da es
+                Teil des
+                Fiordland National Parks im Südwesten der Insel ist, mit zum Weltnaturerbe der UNESCO, bei der die
+                Region seit
+                1990 unter dem Namen Te Wahipounamu registriert ist.
+            <div class="quelle">(Quelle: <a href="https://de.wikipedia.org/wiki/Milford_Sound/Piopiotahi">Wikipedia</a>)
+            </div>
             </p>
-            <figure> 
+            <figure>
                 <img src="images/attraction.jpg" alt="Fjord in Neuseeland">
-                <figcaption><i class="fa-sharp fa-solid fa-camera-retro"></i>&nbsp;Fjord in Neuseeland
-                (Quelle: <a href="https://pixabay.com/de/photos/neuseeland-milford-sound-fjord-4850753/">pixabay</a>)
+                <figcaption><i class="fa-sharp fa-solid fa-camera-retro"></i>&nbsp;Milford Sound, Fjord in Neuseeland
+                    (Quelle: <a
+                        href="https://pixabay.com/de/photos/neuseeland-milford-sound-fjord-4850753/">pixabay</a>)
                 </figcaption>
             </figure>
             <h3>Übersichtskarte</h3>
-                <div class="shadow" id="map"
-                ></div>
-                
-                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-                <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-                
-            <h3>Links</h3>   
-                <ul>
-                    <li> <a href="https://de.wikipedia.org/wiki/Milford_Sound/Piopiotahi">Wikipedia Eintrag Milford Sound</a> </li>
-                    <li> <a href="https://www.milford-sound.co.nz/">Milford Sound New Zealand</a></li>
-                    <li> <a href="https://www.highlights-in-neuseeland.de/sehenswurdigkeiten/milford-sound/" >Highlights in Neuseeland</a> </li>
-                </ul>
+            <div class="shadow" id="map"></div>
+
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+                integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+            <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+                integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+            <h3>Links</h3>
+            <ul>
+                <li> <a href="https://de.wikipedia.org/wiki/Milford_Sound/Piopiotahi">Wikipedia Eintrag Milford
+                        Sound</a> </li>
+                <li> <a href="https://www.milford-sound.co.nz/">Milford Sound New Zealand</a></li>
+                <li> <a href="https://www.highlights-in-neuseeland.de/sehenswurdigkeiten/milford-sound/">Highlights in
+                        Neuseeland</a> </li>
+            </ul>
         </article>
     </main>
     <footer>
         <nav>
-           
-            <a href="https://mirjamkirschner.github.io/nz"> <i class="fa-sharp fa-solid fa-arrow-left">&nbsp;</i>vorhergehende Etappe</a>
+
+            <a href="https://mirjamkirschner.github.io/nz"> <i
+                    class="fa-sharp fa-solid fa-arrow-left">&nbsp;</i>vorhergehende Etappe</a>
             <span>Milford Sound</span>
-            <a href="https://sebastianv99.github.io/nz">nächste Etappe &nbsp;<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-           
+            <a href="https://sebastianv99.github.io/nz">nächste Etappe &nbsp;<i
+                    class="fa-sharp fa-solid fa-arrow-right"></i></a>
+
         </nav>
     </footer>
 </body>
