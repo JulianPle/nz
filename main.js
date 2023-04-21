@@ -98,8 +98,8 @@ const STOPS = [
 
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
-//funktioniert nicht
-//map.addControl(new L.Control.Fullscreen());
+
+map.addControl(new L.Control.Fullscreen());
 
 L.control.scale({ imperial: false, position: "bottomleft" }).addTo(map);
 
